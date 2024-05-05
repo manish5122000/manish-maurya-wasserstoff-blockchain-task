@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block main-app %}
+
+<form id="deployForm" method="GET" action="{% url 'deploy_contract' %}">
+    <button id="deployBtn" type="button">Deploy Contract</button>
+</form>
+
+{% endblock main-app %}
+
+{% block javascript %}
+<script>
+    document.getElementById("deployBtn").addEventListener("click", function() {
+        document.getElementById("deployForm").submit();
+    });
+</script>
+{% endblock javascript %} 
